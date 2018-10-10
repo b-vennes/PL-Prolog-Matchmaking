@@ -1,5 +1,5 @@
 % the threshold limit that defines compatibility
-thresholdLimit(200).
+thresholdLimit(600).
 
 % relation to test your matchAll relation with various combinations of lists
 % of men/women/locations
