@@ -1,5 +1,5 @@
 % the threshold limit that defines compatibility
-thresholdLimit(700).
+thresholdLimit(100).
 
 % relation to test your matchAll relation with various combinations of lists
 % of men/women/locations
@@ -14,10 +14,10 @@ testIt(COUNT,START1,START2,START3,[LIST1,LIST2,LIST3],RESULT) :-
   bigManList(TEMP1), % TEMP1 is the full list of men
   bigWomanList(TEMP2), % TEMP2 is the full list of women
   bigPlaceList(TEMP3), % TEMP3 is the full list of locations
-  range(START1,1,TEMP1,LIST1), % COUNT men starting at position START1
-  range(START2,30,TEMP2,LIST2), % COUNT women starting at position START2
-  range(START3,20,TEMP3,LIST3), % COUNT locations starting at position START3
-  matchAll(LIST1,LIST2,LIST3,RESULT). % recursively invoke matchAll
+  range(START1,6,TEMP1,LIST1), % COUNT men starting at position START1
+  range(START2,4,TEMP2,LIST2), % COUNT women starting at position START2
+  range(START3,3,TEMP3,LIST3), % COUNT locations starting at position START3
+  matchMost(LIST1,LIST2,LIST3,1,RESULT). % recursively invoke matchAll
 
 % defines the "likes" relationship, telling whether two entities are
 % compatible
